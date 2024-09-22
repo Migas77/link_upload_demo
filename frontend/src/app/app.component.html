@@ -1,0 +1,13 @@
+<main class="main">
+
+  <p-card header="Supported Cloud Platforms: OneDrive">
+    <form [formGroup]="uploadFileForm" (ngSubmit)="onSubmitUploadFile()">
+      <div class="form-control">
+        <input type="text" pInputText formControlName="link"/>
+      </div>
+
+    </form>
+  </p-card>
+
+  <router-outlet />
+</main>
