@@ -5,9 +5,15 @@
       <div class="form-control">
         <input type="text" pInputText formControlName="link"/>
       </div>
-
+      <p-divider />
+      <p-button label="Submit" type="submit"/>
     </form>
   </p-card>
+
+
+  <p-dialog header="Edit Profile" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '25rem' }" (onHide)="dialogVisible = false">
+    <p-messages [(value)]="messages" [enableService]="false" [closable]="false"/>
+  </p-dialog>
 
   <router-outlet />
 </main>
