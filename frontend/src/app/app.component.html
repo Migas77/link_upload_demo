@@ -1,6 +1,6 @@
-<main class="main">
+<main>
 
-  <p-card header="Supported Cloud Platforms: OneDrive">
+  <p-card header="Supported Cloud Platforms: GoogleDrive">
     <form [formGroup]="uploadFileForm" (ngSubmit)="onSubmitUploadFile()">
       <div class="form-control">
         <input type="text" pInputText formControlName="link"/>
@@ -13,6 +13,9 @@
 
   <p-dialog header="Edit Profile" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '25rem' }" (onHide)="dialogVisible = false">
     <p-messages [(value)]="messages" [enableService]="false" [closable]="false"/>
+    <p-card header="Upload Progress Status">
+      <p-progressBar [value]="progress" />
+    </p-card>
   </p-dialog>
 
   <router-outlet />

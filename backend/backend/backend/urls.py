@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
 from backend import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('upload/', views.download_file),
+    path('upload/status/<int:file_id>', views.get_download_status),
 ]
